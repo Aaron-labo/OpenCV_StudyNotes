@@ -1,0 +1,2 @@
+# OpenCV_StudyNotes
+用于存放我学习OpenCV过程中的代码
