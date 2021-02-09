@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread("D:\Personal\Pictures\wallpaper\lion.jpeg")
+img = cv2.imread("E:\\Python\\OpenCV_StudyNotes\\picture\\credit_card1.png")
 img = cv2.resize(img, None, fx=0.8, fy=0.8)
 #二值化处理
 imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

@@ -1,6 +1,6 @@
 import cv2
 
-img = cv2.imread("D:\Personal\Pictures\wallpaper\lion.jpeg")
+img = cv2.imread("E:\\Python\\OpenCV_StudyNotes\\picture\\credit_card1.png")
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 ret1, thresh1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
