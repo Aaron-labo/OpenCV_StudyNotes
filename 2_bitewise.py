@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt
 
 img1 = cv2.resize(cv2.imread("picture\\panda.jpeg"), (500, 600))
 img2 = cv2.resize(cv2.imread("picture\\cat.jpeg"), (100, 150))
@@ -17,12 +18,12 @@ img2_bg = cv2.bitwise_and(img2, img2, mask=mask_inv)
 dst = cv2.add(img1_bg, img2_bg)
 img1[350:rows+350, 10:cols+10] = dst
 
-cv2.imshow('image1', img1)
-cv2.imshow('image2', img2)
-cv2.imshow('binary', mask_inv)
-cv2.imshow('roi', roi)
-cv2.imshow('img1_bg', img1_bg)
-cv2.imshow('img2_bg', img2_bg)
+title = ['img1', 'img2', 'mask_inv', 'roi', 'img_bg', 'img2_bg']
+image = [img1, img2, mask_inv, roi, img1_bg, img2_bg]
 
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+for i in range(len(image)):
+    plt.subplot(2, 3, i + 1)
+    plt.imshow(image[i])
+    plt.title(title[i])
+
+plt.show()
