@@ -1,7 +1,7 @@
 import cv2
 
-img = cv2.imread("D:\Personal\Pictures\wallpaper\yellowcar.jpg")
-img = cv2.resize(img, None, fx = 0.8, fy = 0.8)
+img = cv2.imread("E:\\Python\\OpenCV_StudyNotes\\picture\\lena.jpg")
+img = cv2.resize(img, None, fx=0.8, fy=0.8)
 img = cv2.GaussianBlur(img, (3, 3), 1)
 
 #二值化处理
