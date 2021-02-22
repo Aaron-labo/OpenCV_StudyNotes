@@ -6,10 +6,10 @@
 
 import cv2
 
-img = cv2.imread("D:\Personal\Pictures\wallpaper\yellowcar.jpg")
+img = cv2.imread("E:\\Python\\OpenCV_StudyNotes\\picture\\lena.jpg")
 img = cv2.resize(img, None, fx = 0.8, fy = 0.8)
 
-v1 = cv2.Canny(img, 80, 150)
+v1 = cv2.Canny(img, 100, 200)
 v2 = cv2.Canny(img, 50, 100)
 
 cv2.imshow("Original Image", img)
