@@ -2,7 +2,6 @@ import cv2
 from skimage import morphology
 import numpy as np
 
-
 img = cv2.imread('E:\\Python\\OpenCV_StudyNotes\\picture\\test_1.png',0)
 _,binary = cv2.threshold(img,200,255,cv2.THRESH_BINARY_INV)
 
