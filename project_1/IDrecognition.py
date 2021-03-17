@@ -76,6 +76,9 @@ imageClose = cv2.morphologyEx(imageThresh, cv2.MORPH_CLOSE, sqKernel)
 threshCnts, hier = cv2.findContours(imageClose.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 cur_img = image.copy()
 cv2.drawContours(cur_img, threshCnts, -1, (0, 0, 255), 3)
+# cv2.imshow('contours', cur_img)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
 locs = []
 for (i, c) in enumerate(threshCnts):
